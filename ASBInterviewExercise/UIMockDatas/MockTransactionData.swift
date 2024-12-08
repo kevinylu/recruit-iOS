@@ -18,19 +18,21 @@ struct MockTransactionData {
 
     static func getTransactions() -> [Transaction] {
         let longSummary = String(repeating: textTepeating, count: 10)
+        let date = Date(timeIntervalSince1970: 1700000000)
+        
         if transactions.isEmpty {
             // Provide default mock data if none is set
             return [
                 Transaction(
                     id: 1,
-                    transactionDate: Date(),
+                    transactionDate: date,
                     summary: longSummary,
                     debit: 0.0,
                     credit: 100.0
                 ),
                 Transaction(
                     id: 2,
-                    transactionDate: Date(),
+                    transactionDate: date,
                     summary: longSummary,
                     debit: 50.0,
                     credit: 0.0

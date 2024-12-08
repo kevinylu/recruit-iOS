@@ -60,6 +60,32 @@ class ASBInterviewExerciseUITests: XCTestCase {
         XCTAssertTrue(detailAmount.exists, "Amount should be visible in the details view.")
         XCTAssertTrue(detailGST.exists, "GST should be visible in the details view.")
     }
+    
+    // Test if the details view content matches the selected transaction
+    func testTransactionDetailsContentMatches() throws {
+        let longSummary = String(repeating: "This is a very long summary. ", count: 10)
+        
+        // Tap the first transaction cell
+        let firstCell = app.cells.firstMatch
+        XCTAssertTrue(firstCell.exists, "A transaction cell should exist.")
+        firstCell.tap()
+        
+        // Validate the details view content (Replace these strings with actual expected values)
+        let expectedSummary = longSummary
+        let expectedDate = "AM 11:13:20 WED 15 NOV 2023"
+        let expectedAmount = "+ $100.00"
+        let expectedGST = "$15.00"
+        
+        let detailSummary = app.staticTexts["DetailSummary"]
+        let detailDate = app.staticTexts["DetailDate"]
+        let detailAmount = app.staticTexts["DetailAmount"]
+        let detailGST = app.staticTexts["DetailGST"]
+        
+        XCTAssertEqual(detailSummary.label, expectedSummary, "Summary in details view does not match expected value.")
+        XCTAssertEqual(detailDate.label, expectedDate, "Date in details view does not match expected value.")
+        XCTAssertEqual(detailAmount.label, expectedAmount, "Amount in details view does not match expected value.")
+        XCTAssertEqual(detailGST.label, expectedGST, "GST in details view does not match expected value.")
+    }
 
     func testLongSummaryText() throws {
         // Define a long summary for testing
