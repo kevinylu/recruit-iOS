@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89AEA8532D0543F100BC5984 /* MockTransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA8522D0543F000BC5984 /* MockTransactionData.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0B26B23DFF00AE0E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF7BB0926B23DFF00AE0E0E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89AEA8522D0543F000BC5984 /* MockTransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionData.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89AEA8512D0543E900BC5984 /* UIMockDatas */ = {
+			isa = PBXGroup;
+			children = (
+				89AEA8522D0543F000BC5984 /* MockTransactionData.swift */,
+			);
+			path = UIMockDatas;
+			sourceTree = "<group>";
+		};
 		DCF7BAF726B23DFE00AE0E0E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		DCF7BB0226B23DFF00AE0E0E /* ASBInterviewExercise */ = {
 			isa = PBXGroup;
 			children = (
+				89AEA8512D0543E900BC5984 /* UIMockDatas */,
 				89AEA8462D053EC600BC5984 /* Views */,
 				89AEA8422D053E8200BC5984 /* Components */,
 				89AEA83E2D053A2500BC5984 /* WebServices */,
@@ -302,6 +313,7 @@
 				DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */,
 				DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */,
 				DCF7BB3926B23ED000AE0E0E /* DIManager.swift in Sources */,
+				89AEA8532D0543F100BC5984 /* MockTransactionData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

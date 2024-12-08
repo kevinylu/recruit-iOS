@@ -22,6 +22,11 @@ struct TransactionListViewModel {
             let decoder = DecoderConfiguration.createDecoder()
             let transactions = try decoder.decode([Transaction].self, from: jsonData)
             self.sortedTransactions = Self.sortTransactions(transactions: transactions, by: sortOrder)
+            
+            // Check for UITestMode and load mock data if needed
+            if CommandLine.arguments.contains("-UITestMode") {
+                self.sortedTransactions = MockTransactionData.getTransactions()
+            }
         } catch {
             print("Failed to decode transactions: \(error)")
             self.sortedTransactions = []
