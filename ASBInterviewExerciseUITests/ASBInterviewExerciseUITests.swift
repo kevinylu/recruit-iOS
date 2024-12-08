@@ -37,6 +37,29 @@ class ASBInterviewExerciseUITests: XCTestCase {
         let exists = transactionDate.waitForExistence(timeout: 5)
         XCTAssertTrue(exists, "Transaction date should be visible in the cell.")
     }
+    
+    // Test navigation from transaction cell to details view
+    func testNavigateToTransactionDetails() throws {
+        // Find and tap the first transaction cell
+        let firstCell = app.cells.firstMatch
+        XCTAssertTrue(firstCell.exists, "A transaction cell should exist.")
+        firstCell.tap()
+        
+        // Validate navigation to the details view
+        let detailsNavigationBar = app.navigationBars["Details"]
+        XCTAssertTrue(detailsNavigationBar.exists, "Details view should be displayed with the correct title.")
+        
+        // Validate content in the details view
+        let detailSummary = app.staticTexts["DetailSummary"]
+        let detailDate = app.staticTexts["DetailDate"]
+        let detailAmount = app.staticTexts["DetailAmount"]
+        let detailGST = app.staticTexts["DetailGST"]
+        
+        XCTAssertTrue(detailSummary.exists, "Summary should be visible in the details view.")
+        XCTAssertTrue(detailDate.exists, "Date should be visible in the details view.")
+        XCTAssertTrue(detailAmount.exists, "Amount should be visible in the details view.")
+        XCTAssertTrue(detailGST.exists, "GST should be visible in the details view.")
+    }
 
     func testLongSummaryText() throws {
         // Define a long summary for testing
