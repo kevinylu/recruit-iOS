@@ -22,6 +22,7 @@ class TransactionListTableViewController: UITableViewController {
         navigationItem.backBarButtonItem = backButton
         
         navigationItem.title = "ASB Transactions"
+        self.view.accessibilityIdentifier = navigationItem.title
     }
     
     private func setupWebService() {

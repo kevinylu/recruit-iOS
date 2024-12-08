@@ -30,6 +30,7 @@ class TransactionDetailsViewController: UIViewController {
         
         // Set the title for the current view controller
         navigationItem.title = "Details"
+        self.view.accessibilityIdentifier = "Transaction Details"
         
         let detailsView = TransactionDetailsView(transactionViewModel: transactionViewModel)
         let hostingController = UIHostingController(rootView: detailsView)
