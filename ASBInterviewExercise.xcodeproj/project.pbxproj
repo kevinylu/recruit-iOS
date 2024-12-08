@@ -60,6 +60,9 @@
 		89AEA8332D05397A00BC5984 /* Utilities */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utilities; sourceTree = "<group>"; };
 		89AEA83A2D0539C500BC5984 /* DataModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DataModels; sourceTree = "<group>"; };
 		89AEA83E2D053A2500BC5984 /* WebServices */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WebServices; sourceTree = "<group>"; };
+		89AEA8422D053E8200BC5984 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
+		89AEA8462D053EC600BC5984 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		89AEA84A2D053F5900BC5984 /* TableViewCells */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TableViewCells; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +114,14 @@
 		DCF7BB0226B23DFF00AE0E0E /* ASBInterviewExercise */ = {
 			isa = PBXGroup;
 			children = (
+				89AEA8462D053EC600BC5984 /* Views */,
+				89AEA8422D053E8200BC5984 /* Components */,
 				89AEA83E2D053A2500BC5984 /* WebServices */,
 				89AEA83A2D0539C500BC5984 /* DataModels */,
 				89AEA8332D05397A00BC5984 /* Utilities */,
 				89AEA8322D05395D00BC5984 /* ViewModels */,
 				89AEA82B2D0537CB00BC5984 /* ViewControllers */,
+				89AEA84A2D053F5900BC5984 /* TableViewCells */,
 				DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */,
 				DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */,
 				DCF7BB0926B23DFF00AE0E0E /* Main.storyboard */,
@@ -167,6 +173,9 @@
 				89AEA8332D05397A00BC5984 /* Utilities */,
 				89AEA83A2D0539C500BC5984 /* DataModels */,
 				89AEA83E2D053A2500BC5984 /* WebServices */,
+				89AEA8422D053E8200BC5984 /* Components */,
+				89AEA8462D053EC600BC5984 /* Views */,
+				89AEA84A2D053F5900BC5984 /* TableViewCells */,
 			);
 			name = ASBInterviewExercise;
 			packageProductDependencies = (
