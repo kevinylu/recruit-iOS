@@ -65,7 +65,7 @@ class TransactionListTableViewController: UITableViewController {
         let selectedViewModel = transactionListViewModel.transactionAtIndex(indexPath.row)
         
         // Create the TransactionDetailsViewController with the selected view model
-        let detailsViewController = TransactionDetailsViewController()
+        let detailsViewController = TransactionDetailsViewController(transactionViewModel: selectedViewModel)
         
         // Push it onto the navigation stack
         navigationController?.pushViewController(detailsViewController, animated: true)
