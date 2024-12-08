@@ -25,6 +25,18 @@ class ASBInterviewExerciseUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    // Test if the transaction list displays correctly
+    func testTransactionListDisplaysCorrectly() throws {
+        // Check if the table exists
+        let table = app.tables.firstMatch
+        XCTAssertTrue(table.exists, "Transaction list table should exist.")
+        
+        // Wait for the transaction date to appear
+        let transactionDate = table.staticTexts["TransactionDate"]
+        let exists = transactionDate.waitForExistence(timeout: 5)
+        XCTAssertTrue(exists, "Transaction date should be visible in the cell.")
+    }
 
     func testLongSummaryText() throws {
         // Define a long summary for testing
